@@ -4,9 +4,13 @@
 
 This project is an Excel-based underwriting risk review model designed to evaluate small business applicants for commercial insurance. The model reviews applicant characteristics such as industry, years in business, annual revenue, number of employees, number of prior claims, total losses, requested insurance limit, safety controls, prior cancellation history, and property condition.
 
-The purpose of this project is to simulate the type of work that an underwriter would do including reviewing risk factors, assigning a risk score, classifying applicants by risk score, and making an underwriting decision.
+The purpose of this project is to simulate the type of work that an underwriter may perform, including reviewing risk factors, assigning a risk score, classifying applicants by risk score, and making an underwriting decision.
 
 This project was built to demonstrate practical skills relevant to underwriting, underwriting analyst, insurance operations, and risk analyst roles.
+
+## Dashboard Preview
+
+![Underwriting Dashboard](Underwriting_Screenshots/underwriting_dashboard.png)
 
 ---
 
@@ -29,7 +33,7 @@ This project demonstrates:
 - Exposure analysis
 - Claims and loss history review
 - Referral and decline logic
-- Excel formulas (IFS(), OR(), AND(), SUM(), Nested functions)
+- Excel formulas such as IFS(), OR(), AND(), SUM(), and nested functions
 - PivotTables
 - Business judgment and written explanation
 
@@ -58,11 +62,11 @@ Key fields include:
 - Prior cancellation history
 - Property condition
 
+![Applicant Data](Underwriting_Screenshots/underwriting_applicant_data.png)
+
 ### 2. Guidelines
 
-This sheet contains:
-
-1. The simplified underwriting guidelines used to classify each risk factor as low, medium, or high risk.
+This sheet contains the simplified underwriting guidelines used to classify each risk factor as low, medium, or high risk.
 
 The guideline categories include:
 
@@ -77,18 +81,24 @@ The guideline categories include:
 - Prior cancellation
 - Property condition
 
-2. The total risk score cutoffs for Low Risk, Medium Risk, and High Risk classification
+![Scoring Guidelines](Underwriting_Screenshots/underwriting_guidelines.png)
+
+The Guidelines sheet also contains the total risk score cutoffs for Low Risk, Medium Risk, and High Risk classification:
 
 - Low Risk: 0-20 points
 - Medium Risk: 21-23 points
 - High Risk: 24+ points
 
-3. Underwriting decisions logic
+![Risk Tier Rules](Underwriting_Screenshots/underwriting_risk_tiers.png)
+
+The Guidelines sheet also includes the underwriting decision logic:
 
 - Low Risk: Approve
 - Medium Risk and 8+ Years in Business: Approve
 - Medium Risk and less than 8 Years in Business: Refer to a senior underwriter
 - High Risk: Decline
+
+![Underwriting Decision Rules](Underwriting_Screenshots/underwriting_decision_rules.png)
 
 ### 3. Underwriting Review
 
@@ -115,6 +125,8 @@ Based on the total score, the model assigns:
 - Underwriting decision
 - Underwriter notes
 
+![Decision Output](Underwriting_Screenshots/underwriting_decision_output.png)
+
 ### 4. Dashboard
 
 This sheet summarizes the underwriting review results.
@@ -127,6 +139,10 @@ The dashboard includes:
 - Number of declined accounts
 - Underwriting decision bar chart
 - Risk score by company
+
+The dashboard visuals are supported by PivotTables that summarize the underwriting decision counts and total risk scores by company.
+
+![Dashboard PivotTables](Underwriting_Screenshots/underwriting_pivot_tables.png)
 
 ---
 
@@ -142,8 +158,27 @@ The applicant fits underwriting guidelines and does not present major risk conce
 
 ### Refer to a Senior Underwriter
 
-The applicant has risk very close to the threshold needed for easy approval. Senior underwriter is in a better position to evaluate if this applicant should be approved due to their higher level of experience.
+The applicant has risk very close to the threshold needed for easy approval. A senior underwriter is in a better position to evaluate whether the applicant should be approved due to their higher level of experience and judgment.
 
 ### Decline
 
-The applicant has a risk level past the risk threshold our company is willing to insure.
+The applicant has a risk level beyond the threshold the company is willing to insure.
+
+---
+
+## Files Included
+
+- `Small_Commercial_Underwriting_Project.xlsx` - Main Excel workbook
+- `Underwriting_Screenshots/underwriting_dashboard.png` - Dashboard preview
+- `Underwriting_Screenshots/underwriting_applicant_data.png` - Applicant input data
+- `Underwriting_Screenshots/underwriting_guidelines.png` - Scoring guidelines
+- `Underwriting_Screenshots/underwriting_risk_tiers.png` - Risk tier classification rules
+- `Underwriting_Screenshots/underwriting_decision_rules.png` - Underwriting decision rules
+- `Underwriting_Screenshots/underwriting_decision_output.png` - Applicant-level risk scores and decisions
+- `Underwriting_Screenshots/underwriting_pivot_tables.png` - PivotTables used for dashboard visuals
+
+---
+
+## Note
+
+The data in this project is sample data created for practice and portfolio purposes. It does not include real company, customer, applicant, or policy information.
